@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 8.1.0 - 2026-10-09
+## 8.5.0 - 2026-10-09
 
 ### Added
 
@@ -18,4 +18,4 @@ All notable changes to this project will be documented in this file.
 
 ### Compatibility
 
-- Requires PHP `>=8.1 <8.2`.
+- Requires PHP `>=8.5 <8.6`.
