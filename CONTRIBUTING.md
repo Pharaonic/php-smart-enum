@@ -16,7 +16,7 @@ Please open an issue before proposing a new public method.
 
 ## Supported PHP versions
 
-PHP 8.1 (`>=8.1 <8.2`). Code must not use syntax or functions introduced after PHP 8.1.
+PHP 8.5 (`>=8.5 <8.6`) on this branch. Each PHP minor has its own `8.N.x` release line. Keep code compatible with PHP 8.1 so fixes can be backported to every line.
 
 ## 1. Fork
 
@@ -62,7 +62,7 @@ composer check     # all of the above
 composer validate --strict
 ```
 
-All checks must pass. CI runs them on PHP 8.1.
+All checks must pass. CI runs them on the PHP version of the branch (PHP 8.5 on `8.5.x`).
 
 ## 6. Follow the coding style
 
