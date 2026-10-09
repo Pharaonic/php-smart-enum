@@ -30,6 +30,10 @@ Yes. A unit enum has no backing values, so `values()`, `options()`, `hasValue()`
 
 Declare a `label()` method in the enum, or define a global `smart_enum_label()` function for every enum at once. `labels()`, `options()` and `info()` pick the change up.
 
+## How does IN_PROGRESS become isInProgress()?
+
+The check is `is` plus the case name, with each underscore-separated word capitalized. A word written all in upper case is title-cased first, so `IN_PROGRESS` becomes `isInProgress()`, `PENDING` becomes `isPending()` and `onHold` becomes `isOnHold()`.
+
 ## Will my IDE know about $status->isActive()?
 
 The `is<Case>()` checks are resolved at runtime, so add `@method bool isActive()` tags to the enum's docblock for IDEs and PHPStan.
