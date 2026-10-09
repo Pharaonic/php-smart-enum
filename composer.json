@@ -29,6 +29,7 @@
         "php": ">=8.5 <8.6"
     },
     "require-dev": {
+        "nikic/php-parser": "^5.4",
         "phpstan/phpstan": "^2.2",
         "phpunit/phpunit": "^10.5",
         "squizlabs/php_codesniffer": "^3.13 || ^4.0"
@@ -43,7 +44,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Pharaonic\\SmartEnum\\Tests\\": "tests/"
+            "Pharaonic\\SmartEnum\\Tests\\": "tests/",
+            "Pharaonic\\SmartEnum\\Tools\\": "tools/"
         }
     },
     "scripts": {
