@@ -25,7 +25,7 @@ card:
 seo:
   title: "{package.fullName} - Helpers for Native PHP Enums"
   description: "{package.name} is a PHP package that adds names, values, labels, options, name lookup, comparisons and is<Case>() checks to native PHP enums through a single trait. {package.downloadsShort}+ downloads, {package.license} licensed."
-  keywords: php enum, php enum helpers, native enum, backed enum, unit enum, enum labels, enum options, enum case checks, enum trait, php 8.1 enum
+  keywords: php enum, php enum helpers, native enum, backed enum, unit enum, enum labels, enum options, enum case checks, enum trait, php 8.1+ enum
   author: Pharaonic
   images:
     - "{package.cover}"
