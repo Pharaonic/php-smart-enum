@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest an idea or improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem would this feature solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-api
+    attributes:
+      label: Proposed API
+      description: How the feature would look in code. This package adds helpers and `is<Case>()` checks to native enums; other magic methods, framework integrations and replacements for `cases()`, `from()` or `tryFrom()` are out of scope.
+      render: php
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other solutions or workarounds you have considered, including what native PHP already offers.
+  - type: textarea
+    id: backward-compatibility
+    attributes:
+      label: Backward-compatibility concerns
+      description: Would this change any existing method, signature or result?

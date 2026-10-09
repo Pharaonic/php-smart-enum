@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Community support
+    url: https://discord.gg/XQG9RhvEvf
+    about: Get help from the Pharaonic Discord community.
+  - name: Documentation
+    url: https://pharaonic.dev/packages/php/smart-enum
+    about: Read the documentation for this project.

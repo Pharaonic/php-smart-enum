@@ -1,0 +1,79 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - '8.*.x'
+
+  pull_request:
+    branches:
+      - '8.*.x'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{ matrix.os }} - ${{ matrix.dependencies }} dependencies
+
+    strategy:
+      max-parallel: 2
+
+      fail-fast: false
+
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+        dependencies:
+          - lowest
+          - highest
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Resolve PHP version
+        id: php
+        shell: bash
+        run: |
+          BRANCH="${GITHUB_BASE_REF:-${GITHUB_REF_NAME}}"
+          PHP_VERSION="${BRANCH%.x}"
+
+          echo "branch=${BRANCH}"
+          echo "version=${PHP_VERSION}"
+
+          echo "version=${PHP_VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ steps.php.outputs.version }}
+          coverage: none
+          tools: composer:v2
+
+      - name: Validate Composer
+        run: composer validate --strict
+
+      - name: Install dependencies
+        uses: ramsey/composer-install@v3
+        with:
+          dependency-versions: ${{ matrix.dependencies }}
+          # Composer blocks releases with security advisories by default, which
+          # would silently lift "lowest" above the declared dev-tool floors.
+          composer-options: ${{ matrix.dependencies == 'lowest' && '--no-blocking' || '' }}
+
+      - name: Run tests
+        run: composer test
+
+      - name: PHPStan
+        run: composer analyse -- --no-progress
+
+      - name: Coding style
+        run: composer lint
