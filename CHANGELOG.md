@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 8.1.1 - Unreleased
+
+### Changed
+
+- The package archive no longer includes `docs/`, so `composer require` installs only the library files.
+
 ## 8.1.0 - 2026-10-09
 
 ### Added
