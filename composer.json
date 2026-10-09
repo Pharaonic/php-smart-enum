@@ -1,0 +1,62 @@
+{
+    "name": "pharaonic/php-smart-enum",
+    "description": "Smart, lightweight helpers for native PHP enums.",
+    "keywords": [
+        "php",
+        "enum",
+        "enums",
+        "php enum",
+        "native enum",
+        "backed enum",
+        "trait",
+        "pharaonic"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moamen Eltouny (Raggi)",
+            "email": "raggigroup@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/Pharaonic/php-smart-enum",
+    "support": {
+        "issues": "https://github.com/Pharaonic/php-smart-enum/issues",
+        "source": "https://github.com/Pharaonic/php-smart-enum",
+        "security": "https://github.com/Pharaonic/php-smart-enum/security/policy"
+    },
+    "require": {
+        "php": ">=8.1 <8.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.2",
+        "phpunit/phpunit": "^10.5",
+        "squizlabs/php_codesniffer": "^3.13 || ^4.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Pharaonic\\SmartEnum\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pharaonic\\SmartEnum\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse",
+        "lint": "phpcs",
+        "format": "phpcbf",
+        "check": [
+            "@lint",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
