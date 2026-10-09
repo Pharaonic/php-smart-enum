@@ -45,4 +45,4 @@ enum Status: string
 
 ### Composer refuses to install the package
 
-The package requires PHP 8.1 (`>=8.1 <8.2`); 8.1 is the version that introduced native enums. Check `php -v` and the `config.platform.php` setting in your `composer.json`.
+This release line requires PHP 8.4 (`>=8.4 <8.5`). Each PHP minor from 8.1 has its own release line, and Composer installs the one that matches your PHP; 8.1 is the version that introduced native enums. Check `php -v` and the `config.platform.php` setting in your `composer.json`.
