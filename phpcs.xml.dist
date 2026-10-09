@@ -3,6 +3,7 @@
     <description>PSR-12 coding standard for pharaonic/php-smart-enum.</description>
     <file>src</file>
     <file>tests</file>
+    <file>tools</file>
     <arg name="colors"/>
     <arg name="extensions" value="php"/>
     <rule ref="PSR12"/>

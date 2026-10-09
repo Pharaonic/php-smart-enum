@@ -1,8 +1,11 @@
 * text=auto eol=lf
 
 /.github export-ignore
+/bin export-ignore
 /docs export-ignore
 /tests export-ignore
+/tools export-ignore
+/generate-enum-docblocks.sh export-ignore
 /.editorconfig export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
