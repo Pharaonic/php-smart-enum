@@ -1,0 +1,17 @@
+- Getting Started
+  - [Overview](#overview)
+  - [Installation](#installation)
+- Usage
+  - [Basic Usage](#basic-usage)
+  - [Static Methods](#static-methods)
+  - [Instance Methods](#instance-methods)
+  - [Case Checks](#case-checks)
+  - [Labels](#labels)
+  - [Unit vs Backed Enums](#unit-and-backed-enums)
+- API Reference
+  - [Methods](#api-reference)
+- Examples
+  - [Use Cases](#examples)
+  - [Troubleshooting](#troubleshooting)
+- Community
+  - [Contributors](#contributors)
