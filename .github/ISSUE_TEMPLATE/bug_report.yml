@@ -13,7 +13,7 @@ body:
     id: php-version
     attributes:
       label: PHP version
-      placeholder: '8.1'
+      placeholder: '8.2'
     validations:
       required: true
   - type: textarea
