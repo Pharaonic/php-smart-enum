@@ -5,6 +5,9 @@ badge: Key Features
 title: Everything your enums are missing
 subtitle: One trait, added to the enums you already have.
 items:
+  - icon: badge-check
+    title: isActive() for Every Case
+    text: "Each case gets its own check, named from the case: `isActive()` for `Active`, `isInProgress()` for `IN_PROGRESS`, `isOnHold()` for `onHold`."
   - icon: lines
     title: Names, Values & Labels
     text: "`names()`, `values()` and `labels()` list your cases in the shape you need."
@@ -17,9 +20,6 @@ items:
   - icon: check-circle
     title: Strict Comparisons
     text: "`eq()`, `is()`, `isNot()`, `in()` and `notIn()` match a case, a case name or a backing value, with no type juggling."
-  - icon: badge-check
-    title: Case Checks
-    text: "Every case gets its own check: `$status->isActive()`, `$order->isInCooking()`."
   - icon: switch
     title: Unit & Backed Enums
     text: The same trait works on unit, string-backed and int-backed enums, and custom labels flow into `labels()` and `options()`.

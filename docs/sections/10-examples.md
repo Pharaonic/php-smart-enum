@@ -1,6 +1,23 @@
 ## Examples
 
-### 1. A select input
+### 1. Branching on a status
+
+Read the checks like plain English when the code depends on the current case.
+
+```php title="src/Orders/OrderNotifier.php"
+public function notify(Order $order): void
+{
+    if ($order->status->isOutForDelivery()) {
+        $this->sms->send($order->phone, 'Your order is on its way.');
+    }
+
+    if ($order->status->isDelivered()) {
+        $this->mailer->send(new OrderDelivered($order));
+    }
+}
+```
+
+### 2. A select input
 
 Build `<option>` tags from `options()`, which maps each backing value to its label.
 
@@ -33,7 +50,7 @@ Build `<option>` tags from `options()`, which maps each backing value to its lab
   </select>
   ```
 
-### 2. Validating input
+### 3. Validating input
 
 Check a submitted value before converting it with PHP's own `from()`.
 
@@ -45,7 +62,7 @@ if (! Status::hasValue($input['status'])) {
 $status = Status::from($input['status']);
 ```
 
-### 3. Guarding a state change
+### 4. Guarding a state change
 
 Allow an action only for some cases.
 
@@ -60,7 +77,7 @@ public function suspend(): void
 }
 ```
 
-### 4. Configuration by case name
+### 5. Configuration by case name
 
 Read a case name from configuration or the environment and resolve it, with a fallback.
 
@@ -68,7 +85,7 @@ Read a case name from configuration or the environment and resolve it, with a fa
 $defaultStatus = Status::tryFromName(getenv('DEFAULT_STATUS') ?: '') ?? Status::Pending;
 ```
 
-### 5. Serializing for an API
+### 6. Serializing for an API
 
 Return the case metadata from `info()` in a JSON response.
 

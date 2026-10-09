@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 8.5.1 - 2026-10-09
+
+### Changed
+
+- Documentation puts the `is<Case>()` checks first, with a case-name-to-check table (`IN_PROGRESS` → `isInProgress()`), the names that are not checks and what to write instead, and a status-branching example.
+
 ## 8.5.0 - 2026-10-09
 
 ### Added

@@ -10,8 +10,8 @@ badges:
   - label: "{package.downloadsShort}+ downloads"
     color: blue
 eyebrow: "{package.name}"
-title: Native enums,
-highlight: a little smarter
+title: Native enums that
+highlight: know isActive()
 buttons:
   - label: View Full Documentation
     href: "{card.docsUrl}"
@@ -27,4 +27,4 @@ labels:
   copied: Copied!
 ---
 
-Add `use SmartEnum;` to any native PHP enum and get helpers for names, values, labels, options, lookup by case name, strict comparisons and `isActive()`-style checks. Your enums stay native: no base class, no code generation, no framework.
+Add `use SmartEnum;` to any native PHP enum and every case can answer for itself: `$status->isActive()` for `Active`, `$order->isInProgress()` for `IN_PROGRESS`. You also get helpers for names, values, labels, options, lookup by case name and strict comparisons. Your enums stay native: no base class, no code generation, no framework.
