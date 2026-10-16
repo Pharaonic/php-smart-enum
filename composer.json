@@ -19,8 +19,9 @@
             "email": "raggigroup@gmail.com"
         }
     ],
-    "homepage": "https://github.com/Pharaonic/php-smart-enum",
+    "homepage": "https://pharaonic.dev/packages/php/smart-enum",
     "support": {
+        "docs": "https://pharaonic.dev/packages/php/smart-enum",
         "issues": "https://github.com/Pharaonic/php-smart-enum/issues",
         "source": "https://github.com/Pharaonic/php-smart-enum",
         "security": "https://github.com/Pharaonic/php-smart-enum/security/policy"
